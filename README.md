@@ -12,6 +12,7 @@ To write a python program to perform stop and wait protocol
 6. Stop the Program
 ## PROGRAM
 # CLIENT:
+```
 import socket   
 s=socket.socket()   
 s.bind(('localhost',8000))  
@@ -27,15 +28,16 @@ continue
 else:   
 c.close()  
 break   
-
+```
 ## SERVER
+```
 import socket   
 s=socket.socket()   
 s.connect(('localhost',8000))   
 while True:   
 print(s.recv(1024).decode())   
 s.send("Acknowledgement Recived".encode())   
-
+```
 # OUTPUT
 ## CLIENT:
 ![image](https://github.com/kishore2109K/2a_Stop_and_Wait_Protocol/assets/152274619/bf820695-9ebc-4c9c-a6fb-132d88cd15c2)
